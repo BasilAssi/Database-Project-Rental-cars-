@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="537.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StatsController">
+    <children>
+        <ComboBox fx:id="year" layoutX="181.0" layoutY="14.0" prefWidth="150.0" />
+        <Label layoutX="14.0" layoutY="18.0" text="Select Report Year" />
+        <Label layoutX="123.0" layoutY="60.0" text="STATISTICS OF CAR RENTAL SYSTEM">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="statistics" alignment="TOP_LEFT" layoutX="24.0" layoutY="113.0" prefHeight="254.0" prefWidth="490.0" />
+    </children>
+</AnchorPane>

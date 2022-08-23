@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="274.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
+   <children>
+      <Button fx:id="rentTransaction" layoutX="33.0" layoutY="432.0" mnemonicParsing="false" onAction="#rentTransactions" prefHeight="26.0" prefWidth="200.0" text="Rent Transactions" />
+      <Button fx:id="payments" layoutX="34.0" layoutY="80.0" mnemonicParsing="false" onAction="#payments" prefHeight="26.0" prefWidth="200.0" text="Payments" />
+      <Button fx:id="rentalCars" layoutX="34.0" layoutY="124.0" mnemonicParsing="false" onAction="#rentalCars" prefHeight="26.0" prefWidth="200.0" text="Rental Cars" />
+      <Label layoutX="37.0" layoutY="35.0" prefHeight="27.0" prefWidth="200.0" text="CAR RENTAL COMPANY" textFill="#0ce421">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="insurancePolicy" layoutX="35.0" layoutY="212.0" mnemonicParsing="false" onAction="#insurancePolicies" prefHeight="26.0" prefWidth="200.0" text="Insurance Policies" />
+      <Button fx:id="customers" layoutX="35.0" layoutY="168.0" mnemonicParsing="false" onAction="#customers" prefHeight="26.0" prefWidth="200.0" text="Customers" />
+      <Button fx:id="employee" layoutX="33.0" layoutY="256.0" mnemonicParsing="false" onAction="#employees" prefHeight="26.0" prefWidth="200.0" text="Employees" />
+      <Button fx:id="accident" layoutX="33.0" layoutY="300.0" mnemonicParsing="false" onAction="#accidents" prefHeight="26.0" prefWidth="200.0" text="Accidents" />
+      <Button fx:id="rentalCarsCompany" layoutX="33.0" layoutY="344.0" mnemonicParsing="false" onAction="#rentalCarsCompanies" prefHeight="26.0" prefWidth="200.0" text="Rental Cars Companies" />
+      <Button fx:id="supplierCompany" layoutX="33.0" layoutY="388.0" mnemonicParsing="false" onAction="#supplierCompanies" prefHeight="26.0" prefWidth="200.0" text="Supplier Companies" />
+      <Button fx:id="Statistics" layoutX="34.0" layoutY="519.0" mnemonicParsing="false" onAction="#stats" prefHeight="26.0" prefWidth="200.0" text="Statistics" />
+      <Button fx:id="Reports" layoutX="33.0" layoutY="476.0" mnemonicParsing="false" onAction="#reports" prefHeight="26.0" prefWidth="200.0" text="Reports" />
+   </children>
+</AnchorPane>

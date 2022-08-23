@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="493.0" prefWidth="743.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportController">
+    <tabs>
+        <Tab text="Top 5 Rented Cars">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <TableView fx:id="TopCarsTable" layoutY="11.0" prefHeight="451.0" prefWidth="743.0">
+                            <columns>
+                                <TableColumn fx:id="colCarId" prefWidth="94.39999389648438" text="Car Id" />
+                                <TableColumn fx:id="colCarType" prefWidth="87.20004272460938" text="Car Type" />
+                                <TableColumn fx:id="colWeight" prefWidth="68.79998779296875" text="Weight" />
+                                <TableColumn fx:id="colBrand" prefWidth="119.20001220703125" text="Brand" />
+                                <TableColumn fx:id="colModel" prefWidth="93.5999755859375" text="Model" />
+                                <TableColumn fx:id="colYear" text="Year" />
+                                <TableColumn fx:id="colEngineType" prefWidth="95.99993896484375" text="Engine Type" />
+                                <TableColumn fx:id="colDailyFare" minWidth="4.0" prefWidth="103.199951171875" text="Daily Fare" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Top 10 Customers">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tableCustomers" prefHeight="474.0" prefWidth="743.0">
+                     <columns>
+                        <TableColumn fx:id="colCustomerId" prefWidth="75.0" text="Customer Id" />
+                        <TableColumn fx:id="colCustomerName" prefWidth="144.79998779296875" text="Name" />
+                        <TableColumn fx:id="colCustomerAddress" prefWidth="108.79998779296875" text="Address" />
+                        <TableColumn fx:id="colCustomerPhone" prefWidth="117.60003662109375" text="Phone" />
+                        <TableColumn fx:id="colcustomerBankAccount" prefWidth="155.20001220703125" text="Bank Account" />
+                        <TableColumn fx:id="colDateOfBirth" prefWidth="143.199951171875" text="Date of birth" />
+                     </columns>
+                  </TableView>
+               </children></AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="797.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeController">
+    <children>
+        <AnchorPane layoutY="6.0" prefHeight="543.0" prefWidth="228.0" style="-fx-background-color: #28252e;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button layoutX="24.0" layoutY="366.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #64d597;" text="Add" />
+                <Button layoutX="24.0" layoutY="422.0" mnemonicParsing="false" onAction="#editEmployee" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: Orange;" text="Update" />
+                <Button layoutX="24.0" layoutY="476.0" mnemonicParsing="false" onAction="#deleteEmployee" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: red;" text="Delete" />
+                <TextField fx:id="txtEmployeeName" layoutX="24.0" layoutY="60.0" onKeyReleased="#searchEmployee" prefHeight="30.0" prefWidth="180.0" promptText="Employee Name" />
+                <TextField fx:id="txtEmployeeAddress" layoutX="24.0" layoutY="107.0" prefHeight="30.0" prefWidth="180.0" promptText="Address" />
+                <TextField fx:id="txtEmployeePhone" layoutX="24.0" layoutY="152.0" prefHeight="30.0" prefWidth="180.0" promptText="Phone" />
+                <DatePicker fx:id="txtDateOfBirth" layoutX="24.0" layoutY="197.0" prefHeight="30.0" prefWidth="180.0" promptText="Date of Birth" />
+                <TextField fx:id="txtEmployeeId" disable="true" layoutX="24.0" layoutY="21.0" prefHeight="23.0" prefWidth="180.0" promptText="ID" />
+            <Button layoutX="24.0" layoutY="534.0" mnemonicParsing="false" onMouseClicked="#clear" prefHeight="40.0" prefWidth="180.0" text="Clear Form" />
+            <TextField fx:id="txtEmployeeEmail" layoutX="24.0" layoutY="282.0" prefHeight="30.0" prefWidth="180.0" promptText="Email" />
+            <TextField fx:id="txtEmployeeSalary" layoutX="24.0" layoutY="240.0" prefHeight="30.0" prefWidth="180.0" promptText="Salary" />
+            <ComboBox fx:id="comboCompanyId" layoutX="24.0" layoutY="325.0" prefHeight="30.0" prefWidth="180.0" promptText="Company" />
+            </children>
+        </AnchorPane>
+        <TableView fx:id="tableEmployees" layoutX="225.0" layoutY="77.0" onMouseClicked="#getSelected" prefHeight="524.0" prefWidth="548.0">
+            <columns>
+                <TableColumn fx:id="colEmployeeId" prefWidth="75.0" text="Employee Id" />
+                <TableColumn fx:id="colEmployeeName" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="colEmployeeAddress" prefWidth="92.0" text="Address" />
+                <TableColumn fx:id="colEmployeePhone" prefWidth="97.0" text="Phone" />
+            <TableColumn fx:id="colDateOfBirth" prefWidth="97.0" text="Date of birth" />
+                <TableColumn fx:id="colSalary" prefWidth="115.0" text="Salary" />
+            <TableColumn fx:id="colEmail" prefWidth="115.0" text="Email" />
+            <TableColumn fx:id="colCompany" prefWidth="115.0" text="Company" />
+            </columns>
+        </TableView>
+        <TextField fx:id="filterField" layoutX="350.0" layoutY="30.0" promptText="Search" />
+    </children>
+</AnchorPane>

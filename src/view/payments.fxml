@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PaymentController">
+    <children>
+        <AnchorPane layoutY="6.0" prefHeight="543.0" prefWidth="228.0" style="-fx-background-color: #28252e;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button layoutX="24.0" layoutY="320.0" mnemonicParsing="false" onAction="#addPayment" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #64d597;" text="Add" />
+                <Button layoutX="24.0" layoutY="376.0" mnemonicParsing="false" onAction="#editPayment" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: Orange;" text="Update" />
+                <Button layoutX="24.0" layoutY="430.0" mnemonicParsing="false" onAction="#deletePayment" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: red;" text="Delete" />
+                <TextField fx:id="txtAmount" layoutX="24.0" layoutY="110.0" prefHeight="30.0" prefWidth="180.0" promptText="Amount" />
+                <TextField fx:id="txtPaymentType" layoutX="24.0" layoutY="159.0" prefHeight="30.0" prefWidth="180.0" promptText="Payment Type" />
+                <DatePicker fx:id="txtPaymentDate" layoutX="24.0" layoutY="207.0" prefHeight="30.0" prefWidth="180.0" promptText="Payment Date" />
+                <TextField fx:id="txtPaymentId" disable="true" layoutX="24.0" layoutY="21.0" prefHeight="23.0" prefWidth="180.0" promptText="ID" />
+            <Button layoutX="24.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#clear" prefHeight="40.0" prefWidth="180.0" text="Clear Form" />
+            <ComboBox fx:id="comboCarId" layoutX="24.0" layoutY="59.0" prefHeight="30.0" prefWidth="180.0" promptText="Car Id" />
+            </children>
+        </AnchorPane>
+        <TableView fx:id="tablePayments" layoutX="228.0" layoutY="76.0" onMouseClicked="#getSelected" prefHeight="474.0" prefWidth="469.0">
+            <columns>
+                <TableColumn fx:id="colPaymentId" prefWidth="75.0" text="Payment Id" />
+                <TableColumn fx:id="colCarId" prefWidth="75.0" text="Car Id" />
+                <TableColumn fx:id="colAmount" prefWidth="92.0" text="Amount" />
+                <TableColumn fx:id="colPaymentType" prefWidth="97.0" text="Payment Type" />
+                <TableColumn fx:id="colPaymentDate" prefWidth="115.0" text="Payment Date" />
+            </columns>
+        </TableView>
+        <TextField fx:id="filterField" layoutX="350.0" layoutY="30.0" promptText="Search" />
+    </children>
+</AnchorPane>

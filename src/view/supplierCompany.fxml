@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="797.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierCompanyController">
+    <children>
+        <AnchorPane layoutY="6.0" prefHeight="550.0" prefWidth="228.0" style="-fx-background-color: #28252e;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button layoutX="24.0" layoutY="311.0" mnemonicParsing="false" onAction="#addCompany" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #64d597;" text="Add" />
+                <Button layoutX="24.0" layoutY="367.0" mnemonicParsing="false" onAction="#editCompany" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: Orange;" text="Update" />
+                <Button layoutX="24.0" layoutY="421.0" mnemonicParsing="false" onAction="#deleteCompany" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: red;" text="Delete" />
+                <TextField fx:id="txtAddress" layoutX="24.0" layoutY="107.0" prefHeight="30.0" prefWidth="180.0" promptText="Address" />
+                <TextField fx:id="txtPhone" layoutX="24.0" layoutY="152.0" prefHeight="30.0" prefWidth="180.0" promptText="Phone" />
+                <TextField fx:id="txtCompanyId" disable="true" layoutX="24.0" layoutY="21.0" prefHeight="23.0" prefWidth="180.0" promptText="ID" />
+                <Button layoutX="24.0" layoutY="479.0" mnemonicParsing="false" onMouseClicked="#clear" prefHeight="40.0" prefWidth="180.0" text="Clear Form" />
+                <TextField fx:id="txtEmail" layoutX="24.0" layoutY="196.0" prefHeight="30.0" prefWidth="180.0" promptText="Email" />
+            <TextField fx:id="txtCarType" layoutX="23.0" layoutY="62.0" prefHeight="30.0" prefWidth="180.0" promptText="Car Type" />
+            <ComboBox fx:id="comboRentalCompanyId" layoutX="23.0" layoutY="241.0" prefHeight="26.0" prefWidth="180.0" promptText="Rental Company" />
+            </children>
+        </AnchorPane>
+        <TableView fx:id="tableSupplierCompanies" layoutX="228.0" layoutY="76.0" onMouseClicked="#getSelected" prefHeight="476.0" prefWidth="570.0">
+            <columns>
+                <TableColumn fx:id="colCompanyId" prefWidth="75.0" text="Company Id" />
+            <TableColumn fx:id="colCarType" prefWidth="116.0" text="Car Type" />
+                <TableColumn fx:id="colAddress" prefWidth="102.4000244140625" text="Address" />
+                <TableColumn fx:id="colPhone" prefWidth="110.4000244140625" text="Phone" />
+                <TableColumn fx:id="colEmail" prefWidth="116.0" text="Email" />
+                <TableColumn fx:id="colRentalCompanyId" prefWidth="120.0" text="Rental Company Id" />
+            </columns>
+        </TableView>
+        <TextField fx:id="filterField" layoutX="350.0" layoutY="30.0" promptText="Search" />
+    </children>
+</AnchorPane>

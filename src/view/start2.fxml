@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StartController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="595.0" prefWidth="792.0" style="-fx-background-color: #000000;">
+         <children>
+            <ImageView fitHeight="219.0" fitWidth="284.0" layoutX="49.0" layoutY="59.0" pickOnBounds="true">
+               <image>
+                  <Image url="@TarifiMotors.PNG" />
+               </image>
+            </ImageView>
+            <Label layoutX="57.0" layoutY="387.0" prefHeight="69.0" prefWidth="301.0" text="Tarifi Motors" textAlignment="CENTER" textFill="#40d322">
+               <font>
+                  <Font name="System Bold Italic" size="47.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="533.0" prefHeight="28.0" prefWidth="308.0" text="Address : Ramallah -Um Al Sharayet" textFill="#bc1e1e">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Pane layoutX="372.0" layoutY="17.0" prefHeight="526.0" prefWidth="379.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="21.0" layoutY="36.0" prefHeight="76.0" prefWidth="317.0" text="Welcome To " textFill="#322929">
+                     <font>
+                        <Font size="41.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="51.0" layoutY="328.0" mnemonicParsing="false" onAction="#ret" prefHeight="62.0" prefWidth="278.0" style="-fx-background-color: #40d322;" text="Reternal  car">
+                     <font>
+                        <Font name="Freestyle Script" size="40.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="74.0" layoutY="102.0" prefHeight="69.0" prefWidth="330.0" text="Tarifi Motors" textAlignment="CENTER" textFill="#403333">
+                     <font>
+                        <Font name="Freestyle Script" size="76.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

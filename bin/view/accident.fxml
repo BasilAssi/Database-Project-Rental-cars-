@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0"
+            prefWidth="797.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.AccidentController">
+    <children>
+        <AnchorPane layoutY="6.0" prefHeight="543.0" prefWidth="228.0" style="-fx-background-color: #28252e;"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button layoutX="24.0" layoutY="366.0" mnemonicParsing="false" onAction="#addAccident" prefHeight="40.0"
+                        prefWidth="180.0" style="-fx-background-color: #64d597;" text="Add"/>
+                <Button layoutX="24.0" layoutY="422.0" mnemonicParsing="false" onAction="#editAccident"
+                        prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: Orange;" text="Update"/>
+                <Button layoutX="24.0" layoutY="476.0" mnemonicParsing="false" onAction="#deleteAccident"
+                        prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: red;" text="Delete"/>
+                <TextField fx:id="txtCost" layoutX="24.0" layoutY="108.0" prefHeight="30.0" prefWidth="180.0"
+                           promptText="Cost"/>
+                <DatePicker fx:id="txtAccidentDate" layoutX="24.0" layoutY="153.0" prefHeight="30.0" prefWidth="180.0"
+                            promptText="Accident Date"/>
+                <TextField fx:id="txtAccidentId" disable="true" layoutX="24.0" layoutY="21.0" prefHeight="23.0"
+                           prefWidth="180.0" promptText="ID"/>
+                <Button layoutX="24.0" layoutY="534.0" mnemonicParsing="false" onMouseClicked="#clear" prefHeight="40.0"
+                        prefWidth="180.0" text="Clear Form"/>
+                <TextField fx:id="txtLocation" layoutX="24.0" layoutY="238.0" prefHeight="30.0" prefWidth="180.0"
+                           promptText="Location"/>
+                <TextField fx:id="txtBlowType" layoutX="24.0" layoutY="196.0" prefHeight="30.0" prefWidth="180.0"
+                           promptText="Blow Type"/>
+                <ComboBox fx:id="comboCarId" layoutX="24.0" layoutY="62.0" prefHeight="30.0" prefWidth="180.0"
+                          promptText="Car Id"/>
+            </children>
+        </AnchorPane>
+        <TableView fx:id="tableAccidents" layoutX="228.0" layoutY="76.0" onMouseClicked="#getSelected"
+                   prefHeight="524.0" prefWidth="548.0">
+            <columns>
+                <TableColumn fx:id="colAccidentId" prefWidth="75.0" text="Accident Id"/>
+                <TableColumn fx:id="colCarId" prefWidth="75.0" text="Car Id"/>
+                <TableColumn fx:id="colCost" prefWidth="92.0" text="Cost"/>
+                <TableColumn fx:id="colAccidentDate" prefWidth="97.0" text="Accident Date"/>
+                <TableColumn fx:id="colBlowType" prefWidth="97.0" text="Blow Type"/>
+                <TableColumn fx:id="colLocation" prefWidth="115.0" text="Location"/>
+            </columns>
+        </TableView>
+        <TextField fx:id="filterField" layoutX="350.0" layoutY="30.0" promptText="Search"/>
+    </children>
+</AnchorPane>
